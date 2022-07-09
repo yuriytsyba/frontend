@@ -1,0 +1,657 @@
+
+   
+   *{
+    box-sizing:border-box;}
+  html,body {
+    background-image: url(../img/bg4.jpg); 
+    
+    max-width: 1200px;
+    overflow-x:hidden;
+}
+   
+    a {
+        text-decoration: none ;
+    }
+    
+
+ 
+    
+    #mainheader {
+    background: none;
+        color:aliceblue;
+        position: relative;
+        bottom:50%;
+        
+        height:50%;
+        font-size: 300%;
+        margin-left: 15%;
+        margin-right: 15%;
+       
+    }
+    #mainheader1 {
+        text-shadow: 5px 5px 20px rgb(216, 203, 253);
+    }
+#mainheader2 {
+    position: relative;
+    bottom:100px;
+    font-size: 75%;
+    margin-left: 15%;
+    text-shadow: 20px 5px 20px rgb(216, 203, 253);
+}
+#mainheader3 {
+    position: relative;
+    bottom:185px;
+    font-size: 55%;
+    margin-left: 15%;
+    font-style: italic;
+    text-shadow: 20px 20px 50px rgb(216, 203, 253);
+    
+
+}
+/*--------------кубик-------------------------------------------------------------*/ 
+.page__section_2 {
+    color: #fff;
+    text-align:center;
+    margin: 0px auto;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 250px;
+}
+
+/*----не видимость для точки-заголовка ----*/
+#cubetitledeletepoint {
+visibility: hidden;
+}
+
+
+.container {
+    position:relative;
+    margin: 200px auto;
+    width: 100%;
+    height: 200px;
+    perspective: 10000px; 
+    
+
+}
+
+.cube {
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    transform: rotate3d(1,1,1, 20deg);
+    position:relative;
+    perspective: 200000px; 
+    bottom: 200px;
+    animation: rotate 50s infinite linear;
+    
+}
+
+.side {
+    position:absolute;
+    width: inherit;
+    height: inherit;
+    backface-visibility: hidden;
+}
+.front{
+    transform: translateZ(100px);
+}
+.back{
+    transform: rotateY(180deg) translateZ(100px);
+}
+.right{
+    transform: rotateY(90deg) translatez(100px);
+}
+.left{
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes rotate {from{
+    transform:rotateX(20deg) rotateY(360deg); 
+}
+to {
+    transform: rotateX(0deg) rotateY(0deg); 
+}
+}
+
+
+
+
+
+
+
+
+.popup {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.815);
+    top:0;
+    left:0;
+    opacity: 0;
+    visibility: hidden;
+   
+}
+.popup:target{
+    opacity: 1;
+    visibility: visible;
+}
+.popup__area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+}
+
+.popup__body {
+    min-height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    right: 10px;
+top: 10px;
+}
+.popup__content {
+    background-image: url(..//img/bg4.jpg);
+    color: rgb(255, 255, 255);
+    max-width: 800px;
+    padding: 10px;
+    position: relative;
+    border-radius: 40px;
+    border: rgb(22, 45, 107) ;
+    border-style: solid;
+    border-width: 3px 5px;
+    font-style: Arial;
+    font-weight: 700;
+}
+.popup__close {
+position: absolute;
+right: 20px;
+top: 20px;
+font-size: 20px;
+color:rgb(255, 255, 255);
+text-decoration: none;
+}
+.popup__title {
+    font-size: 30px;
+    margin: 0px 0px 1em 0px ;
+    text-align: center;
+    
+}
+
+.popup__text {
+    font-size: 20px;
+    margin: 0px 0px 1em 0px ;
+    line-height:150% ;
+}   
+
+/*----------------------------*/
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgb(9, 14, 85);
+    
+    
+}
+.header__container {
+    max-width: 1800px;
+    margin: 0px auto;
+    display: flex;
+    padding: 0px 30px;
+    align-items: center;
+    justify-content:space-between;
+    min-height: 60px;
+    list-style-type: none;
+}
+  
+
+  
+.header__logo {
+   
+    border-radius: 50%;
+    background-image: url(../img/919.jpg);
+    position:relative;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    
+}
+
+.menu__icon {
+display: none;
+
+}
+.menu__body {
+   text-decoration: none;
+  
+}
+.menu__list {
+list-style-type: none;
+
+}
+.menu__list > li {
+    position: relative;
+    margin: 0px 0px 0px 40px;
+    
+}
+.menu__link {
+color:#fff;
+font-size: 19px;
+}
+.menu__link:hover {
+    text-decoration: underline;
+}
+
+body._pc .menu__arrow
+ {
+    opacity: 0;;
+}
+
+body._lock {
+    overflow: hidden;
+}
+/* ------------наведении мышкой открыв и пропадает уводишь мышь------------------*/
+body._pc .menu__list > li:hover .menu__sub-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translate( 0px 0px);
+    pointer-events: all;
+}
+
+/*-----убрать у тач скрина синий цвет при нажатии--*/
+body 
+{
+    -webkit-tap-highlight-color: rgb(0, 0, 0, 0);
+}
+
+/*-------------- в плашке перекрывается иконка при уменьшении ширины на pc------------------*/
+@media (min-width:767px) {
+.menu__list > li {
+    position: relative;
+    margin: 0px 0px 0px 22px;
+}}
+
+
+body._touch .menu__list > li{
+    display: flex;
+    align-items: center;
+
+}
+
+body._touch .menu__link {
+    flex: 1 1 auto;
+   
+    
+}
+
+body._touch .menu__arrow{
+    display: block;
+    width: 0;
+    height: 0;
+    margin: 0px 0px 0px 5px;
+    transition: transform 0.3s ease 0s;
+    border-left: 5px solid transparent ;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #fff;
+
+}
+
+
+body._touch .menu__list > li._active .menu__sub-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translate( 0px 0px);
+    pointer-events: all;
+}
+
+body._touch .menu__list > li._active .menu__arrow {
+    transform: rotate(-180deg);
+}
+
+/* ---------------------------------*/
+
+
+
+.menu__sub-list {
+position: absolute;
+top: 100%;
+right: 0;
+
+padding: 15px;
+min-width: 200px;
+
+    transform:translate(0px 10%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease 0s;
+    background-color: rgba(14, 4, 44, 0.9);
+    border-radius: 5%;
+    
+}
+
+.menu__sub-list li {
+    margin:0px 0px 10px 0px;
+}
+.menu__sub-list li:last-child {
+    margin:0;
+}
+
+
+
+.menu__sub-link {
+
+}
+@media (min-width:767px) {
+    
+    .menu__list {
+        display:flex;
+      
+       
+        
+    }
+    .menu__list > li {
+        padding: 10px 0;
+
+    }
+   
+    .header__neibor {
+        color: #fff;
+        z-index: 5;
+        margin-left: 10%;
+        margin-top: 18px;
+        font-style: italic;
+        position: fixed; 
+        letter-spacing: 3px;
+    
+    }
+
+
+}
+ .menu__sub-link {
+    color:#fff;
+ }
+
+/*-----------убирает хедер при уменьшении окна на pc------*/
+@media  (max-width: 960px) {
+    body._pc .header__neibor {
+        display: none;
+    }
+}
+    /*-----------убирает cкачек планки при длинных названиях меню при уменьшении окна на pc------*/
+@media  (max-width: 863px) {
+    body._pc .header__container {
+ height: 73px;
+    }
+}
+/*----------------------------------*/
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+    
+    .header__logo {
+        
+        margin-top:5px;
+    }
+    
+    .menu__icon {
+       
+        z-index: 5;
+        display: block;
+        position:relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        margin-top: 20%;
+    }
+    .menu__icon span,
+    .menu__icon::before,
+    .menu__icon::after{
+        left:0;
+        position: absolute;
+        height:10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #fff;
+    }
+    .menu__icon::before,
+    .menu__icon::after {
+        content: "";
+    }
+    .menu__icon::before {
+        top: 0;
+    }
+    .menu__icon::after {
+    bottom: 0;
+}
+    .menu__icon span {
+    top:50%;
+    transform: scale(1) translate(0px, -50%) ;
+}
+.menu__icon._active span {
+    transform: scale(0) translate(0px, -50%);
+}
+.menu__icon._active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+}
+.menu__icon._active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+}
+
+    .menu__body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background-color: rgba(0, 0, 0, 0.89);
+    padding: 100px 30px 30px 30px;
+    transition: left 0.3s ease 0s;
+    overflow: auto;
+}
+.menu__body._active {
+    left:0;
+}
+
+.menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    height: 70px;
+    background-color: rgb(9, 14, 85);
+    z-index: 2;
+
+
+}
+    .menu__list > li {
+        flex-wrap:wrap;
+    margin: 0px 0px 30px 0px;
+}
+    .menu__list > li:last-child {
+    margin-bottom: 0;
+}
+.menu__list > li._active .menu__sub-list {
+display:block;
+
+
+
+}
+    .menu__link {
+    font-size: 23px;
+}
+.menu__sub-list {
+    position: relative;
+    background-color: #fff;
+    flex: 1 1 100%;
+    margin: 20px 0px 0px 0px;
+    display: none;
+}
+.menu__sub-link {
+    font-size: 20px;
+    color: #000;
+}
+}
+
+@media (max-width: 850px) {
+    
+    .header__neibor {
+       opacity: 0;}
+    }
+/*--------------zagolovki------------------------*/
+
+.page {
+    padding: 40px 10px 10px 0px;
+    position: absolute;
+    width: 100%;
+    margin: 0px auto;
+   
+}
+#slogan {
+    margin-top: 10px;
+} 
+
+
+.page__title1 {
+    margin-bottom: 0;
+ }
+
+.page_section {
+    margin: 0px auto;
+    max-width: 100%;
+}
+
+/*--------zagolovok---------*/
+.page__section_1 {
+   
+    color: #fff;
+    text-align:center;
+    margin: 0px auto;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    font-size: xx-large;
+height: 200px;    
+}
+/*-----2cекция на куб отведена------------*/
+
+
+
+
+
+/*---------------для 767 бага----------------------*/
+
+
+
+
+
+
+/*------------++++саб лист добавть в умен экран-------pc*/
+
+body._pc .menu__list > li:hover .menu__sub-list {
+    opacity: 1;
+    visibility: visible;
+    transform: translate( 0px 0px);
+    pointer-events: all;
+}
+
+
+
+
+@media (max-width:1460px) {
+    .container{
+        max-width: 1280px;
+ 
+    }
+}
+
+@media (max-width:1300px){
+    .container{
+        max-width: 1100px;
+       
+    }
+}
+@media (max-width:1120px){
+    .container{
+        max-width: 850px;
+    }
+}
+@media (max-width:870px){
+    .container{
+        max-width: 750px;
+    }
+}
+@media (max-width:768px){
+    .container{
+        max-width: none;
+    }
+}
+
+/*-------------table-------------------------------------------*/
+.page__section_3 {
+  
+    color: #fff;
+    text-align:center;
+    margin-right: 400px ;
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+table {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    border-collapse: separate;
+   
+    background-color: rgb(0, 55, 158);
+   
+    border: 2px solid rgb(5, 48, 73);
+    border-radius: 20px;
+    margin-right:20px auto;
+
+}
+
+th {
+    font-size: 18px;
+    padding: 10px;
+    
+}
+td {
+    background: rgb(15, 15, 15);
+    padding: 10px;
+    border-radius: 20px;
+    
+}
+.page__text {
+    font-family: 'Times New Roman', Times, serif;
+}
