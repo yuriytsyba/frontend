@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Home</title>
+
+    <link rel="stylesheet" type="text/css" href="css/air-datepicker.css?_v=20221016135943">
+    <link rel="stylesheet" type="text/css" href="css/slick.css?_v=20221016135943">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css?_v=20221016135943">
+    <link rel="stylesheet" type="text/css" href="css/iconsfont.css?_v=20221016135943">
+    <link rel="stylesheet" href="css/style.min.css?_v=20221016135943">
+   
+    
+
+  </head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+   <div class="header__container _container">
+    <a class="header__logo" href="#">
+        <img src="img/header-logo.svg" alt="">
+    </a>
+    <nav class="header__menu">
+       <ul class="header__menu-list">
+        <li class="header__menu-links"><a href="#" class="header__menu-link">Our Hotel</a></li>
+        <li class="header__menu-links"><a href="#" class="header__menu-link">Rooms & Rates</a></li>
+        <li class="header__menu-links"><a href="#" class="header__menu-link">Facilities</a></li>
+        <li class="header__menu-links"><a href="#" class="header__menu-link">Contact Us</a></li>
+        <li class="header__menu-links"><a href="#" class="header__menu-link"><img src="img/search.svg" alt=""></a></li>
+       </ul>
+    </nav>
+    </div>
+    <div class="form-group">
+        <div class="dropdown">
+            <button class="dropdown__button">Select City</button>
+            <ul class="dropdown__list">
+                <li class="dropdown__list-item" data-value="Pa">Paris</li>
+                <li class="dropdown__list-item" data-value="L">Lisabon</li>
+                <li class="dropdown__list-item" data-value="T">Tokyo</li>
+                <li class="dropdown__list-item" data-value="Pr">Praga</li>
+            </ul>
+            <input class="dropdown__input-hidden" type="text" name="select-category" id="">
+        </div>
+        <div class="date-start">
+            <input class="date-start__input" placeholder="Check In" type="text" id="airdatepicker">
+        </div>
+        <div class="date-end">
+            <input class="date-end__input" placeholder="Check Out" type="text" id="airdatepicker2">
+        </div>
+        <button class="check-btn" type="submit">Check Avaliability</button>
+    </div>
+    
+  
+        
+   
+</header>
+    <main>
+    <!--<picture><source srcset="img/hotel-bg.webp" type="image/webp"><img src="img/hotel-bg.jpg" alt=""></picture>-->
+    </main>
+
+
+      <footer class="footer">
+    <div class="form">
+        <form action="#" class="form__body" id="form">
+            <div class="form__item">
+                <label for="forName" class="form__label">Имя*:</label>
+                <input id="forName" type="text" name="name" class="form__input _req">
+            </div>
+            <div class="form__item">
+                <label for="forEmail" class="form__label">E-mail*:</label>
+                <input id="forEmail" type="text" name="email" class="form__input _req _email">
+            </div>
+            <div class="form__item">
+                <div class="options">
+                    <div class="option__item">
+                        <input id="forright" checked type="radio" name="radio" value="right" class="options__input" onmousedown="this.isChecked = this.checked"; onclick="this.checked=!this.isChecked;">
+                        <label for="forright" class="options__label"><span>Правая</span></label>
+                    </div>
+                    <div class="option__item">
+                        <input id="forleft" type="radio" name="radio" value="left" class="options__input" >
+                        <label for="forleft" class="options__label" ><span>Левая</span></label>
+                    </div>
+                </div>
+            </div>
+            <div class="form__item">
+                <label for="forMessage" class="form__label">Сообщение:</label>
+                <textarea name="message" id="formMessage" class="form__input"></textarea>
+            </div>
+            <div class="form__item">
+                <select name="age" class="select">
+                    <option value="18-25">Молодой</option>
+                    <option value="25-45">Средний</option>
+                    <option value="45-99">Старый</option>
+                </select>
+            </div>
+            <div class="form__item">
+                <div class="form__label">Прикрепить фото</div>
+                <div class="file">
+                    <div class="file__item">
+                        <input id="formImage" accept=".jpg,.png,.gif" type="file" name="image" class="file__input">
+                        <div class="file__button">Выбрать</div>
+                    </div>
+                    <div id="formPreview" class="file__preview"></div>
+                </div>
+            </div>
+            <div class="form__item">
+                <div class="checkbox">
+                    <input id="formAgreement" type="checkbox" checked name="agreement" class="checkbox__input _req">
+                    <label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>*</span></label>
+                </div>
+            </div>
+            <button type="submit" class="form__button">Отправить</button>
+        </form>
+    </div>
+</footer>
+ </div>
+<script src="js/script.js?_v=20221016135943"> 
+</script>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js?_v=20221016135943"></script>
+ <script src="js/slick.min.js?_v=20221016135943"></script>
+ <script src="js/jquery.magnific-popup.min.js?_v=20221016135943"></script>
+ <script src="js/burger.js?_v=20221016135943"></script>
+ <script src="js/air-datepicker.js?_v=20221016135943"></script>
+ <script src="js/app.min.js?_v=20221016135943"></script>
+</body>
+</html>
