@@ -7,11 +7,11 @@ require 'phpmailer/src/PHPMailer.php';
 
 $mail = new PHPMailer(true);
 $mail->Charset = 'UTF-8';
-$mail->setLanguage('ru','phpmailer/language');
+$mail->setLanguage('ru','phpmailer/language/');
 $mail->IsHTML(true);
 
 //от кого письмо
-$mail->setFrom('info@fls.guru', 'Фрилансер')
+$mail->setFrom('info@fls.guru', 'Фрилансер');
 //кому отправить
 $mail->addAddress('yurahimik2022@gmail.com');
 //тема письма
@@ -49,7 +49,7 @@ if(!empty($_FILES['image']['tmp_name'])) {
     //грузим файл
     if(copy($_FILES['image']['tmp_name'], $filePath)){
         $fileAttach = $filePath;
-        $body.='<p><strong>Фото в приложении</strong>';
+        $body.='<p><strong>Фото в приложении</strong></p>';
         $mail->addAttachment($fileAttach);
       }
     }
