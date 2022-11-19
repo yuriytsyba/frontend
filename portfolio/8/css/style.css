@@ -1,0 +1,683 @@
+@charset "UTF-8";
+/*========ПЕРЕМЕННЫЕ============================================================================*/
+/*========ПЕРЕМЕННЫЕ============================================================================*/
+.footer {
+  text-align: center;
+  padding: 50px 0px;
+}
+
+.footer__social {
+  margin: 0px 0px 26px 0px;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social__item {
+  margin: 0px 17px;
+}
+@media (min-width: 991.98px) {
+  .social__item:hover path {
+    fill: #ff6464;
+    -webkit-transition: fill 0.3s ease 0s;
+    transition: fill 0.3s ease 0s;
+  }
+}
+@charset "UTF-8";
+/*----кнопки ,селекты...*/
+.btn {
+  background: #ff6464;
+  border-radius: 2px;
+  height: 47px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 145%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 0px 20px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (min-width: 992px) {
+  .btn:hover {
+    background-color: #ff4949;
+  }
+}
+@charset "UTF-8";
+.heder {
+  position: relative;
+  z-index: 100;
+}
+
+.header__content {
+  /*--+px padding не прилипало--*/
+  max-width: 1052px;
+  padding: 0px 10px;
+  margin: 0px auto;
+}
+.header__menu {
+  padding: 10px 0;
+  height: 82px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+@media (max-width: 767.98px) {
+  .header__menu {
+    height: 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .menu__body {
+    -webkit-transform: translate(0px, -100%);
+            transform: translate(0px, -100%);
+    -webkit-transition: -webkit-transform 0.8s ease 0s;
+    transition: -webkit-transform 0.8s ease 0s;
+    transition: transform 0.8s ease 0s;
+    transition: transform 0.8s ease 0s, -webkit-transform 0.8s ease 0s;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*-если меню вырастет и не всместится в экран*/
+    overflow: auto;
+    padding: 70px 10px 30px 10px;
+    background-color: rgba(255, 255, 255, 0.801);
+  }
+  .menu__body._active {
+    -webkit-transform: translate(0px, 0%);
+            transform: translate(0px, 0%);
+  }
+}
+.menu__list li {
+  margin: 0px 10px 30px 0px;
+}
+.menu__list li:last-child {
+  margin: 0px 0px 0px 0px;
+}
+@media (min-width: 767.98px) {
+  .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu__list li {
+    margin: 0px 33px 0px 0px;
+  }
+}
+.menu__link {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+.menu__link._active {
+  color: #ff6464;
+}
+@media (min-width: 991.98px) {
+  .menu__link:hover {
+    color: #ff6464;
+  }
+}
+@media (max-width: 767.98px) {
+  .menu__link {
+    font-size: 40px;
+    display: block;
+    text-align: center;
+  }
+}
+
+.icon-menu {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .icon-menu span {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    top: calc(50% - 1px);
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  .icon-menu span:first-child {
+    top: 0px;
+  }
+  .icon-menu span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+  .icon-menu._active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .icon-menu._active span:first-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: calc(50% - 1px);
+  }
+  .icon-menu._active span:last-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    bottom: calc(50% - 1px);
+  }
+}
+@charset "UTF-8";
+/*========ПЕРЕМЕННЫЕ============================================================================*/
+/*========ПЕРЕМЕННЫЕ============================================================================*/
+.hello {
+  padding: 38px 0px 70px 0px;
+}
+@media (max-width: 868px) {
+  .hello {
+    padding: 0px 0px 70px 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  .hello {
+    padding: 0px 0px 60px 0px;
+  }
+}
+
+.hello__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 767.98px) {
+  .hello__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+.hello__content {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 18px 110px 0px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  /*--удалят кнопку например висячий отступ пропадет--*/
+}
+.hello__content *:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 868px) {
+  .hello__content {
+    padding: 18px 50px 0px 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  .hello__content {
+    padding: 0px 0px 0px 0px;
+  }
+}
+
+.hello__title {
+  margin: 0px 0px 25px 0px;
+}
+@media (max-width: 767.98px) {
+  .hello__title {
+    margin: 0px 0px 20px 0px;
+  }
+}
+
+.hello__text {
+  margin: 0px 0px 35px 0px;
+}
+@media (max-width: 767.98px) {
+  .hello__text {
+    padding: 0px 15px;
+    margin: 0px 0px 25px 0px;
+  }
+}
+
+.hello__btn {
+  margin: 0px 0px 25px 0px;
+}
+@media (max-width: 767.98px) {
+  .hello__btn {
+    margin: 0px 0px 20px 0px;
+  }
+}
+
+.hello__avatar {
+  /*---1-запрещ уменьн 2 запрещ увелич 3 базовая ширина!!! текст раздавливает изображ вместо 243х243...144рх например!!!*/
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 243px;
+          flex: 0 0 243px;
+  width: 243px;
+  height: 243px;
+  border-radius: 50%;
+  -webkit-box-shadow: -5px 13px 0px 0px #edf7fa;
+          box-shadow: -5px 13px 0px 0px #edf7fa;
+}
+.hello__avatar img {
+  max-width: 100%;
+}
+@media (max-width: 767.98px) {
+  .hello__avatar {
+    width: 170px;
+    height: 170px;
+    margin: 0px 0px 40px 0px;
+  }
+}
+
+.resent-posts {
+  background: #edf7fa;
+  padding: 25px 0px 13px 0px;
+}
+@media (max-width: 767.98px) {
+  .resent-posts {
+    margin: 25px 0px 23px 0px;
+  }
+}
+
+.recent-posts__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 0px 20px 0px;
+}
+
+.recent-posts__title {
+  padding: 0px 20px 0px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.recent-posts__view-all {
+  /*запрещ уменьш обькту*/
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  font-size: 16px;
+  line-height: 23px;
+  color: #00a8cc;
+}
+@media (max-width: 767.98px) {
+  .recent-posts__view-all {
+    display: none;
+  }
+}
+
+.recent-posts__items {
+  /*-отступ между 20px*/
+  margin: 0px -10px;
+}
+@media (min-width: 767.98px) {
+  .recent-posts__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.recent-posts__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding: 0px 10px;
+  margin: 0px 0px 17px 0px;
+}
+
+.recent-post {
+  height: 100%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 10px rgba(187, 255, 250, 0.25);
+          box-shadow: 0px 4px 10px rgba(187, 255, 250, 0.25);
+  border-radius: 4px;
+  padding: 20px;
+}
+@media (max-width: 767.98px) {
+  .recent-post {
+    padding: 15px;
+  }
+}
+.recent-post *:last-child {
+  margin-bottom: 0;
+}
+
+.recent-post__title {
+  display: inline-block;
+  color: inherit;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 146.1538461538%;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  margin: 0px 0px 17px 0px;
+}
+@media (min-width: 991.98px) {
+  .recent-post__title:hover {
+    color: #ff6464;
+  }
+}
+@media (max-width: 767.98px) {
+  .recent-post__title {
+    font-size: 22px;
+    margin: 0px 0px 17px 0px;
+  }
+}
+
+.recent-post__info {
+  margin: 0px 0px 15px 0px;
+  font-size: 18px;
+  line-height: 144.4444444444%;
+}
+.recent-post__info span {
+  margin: 0px 10px;
+}
+@media (max-width: 767.98px) {
+  .recent-post__info {
+    font-size: 16px;
+    margin: 0px 0px 10px 0px;
+  }
+}
+
+.recent-post__text {
+  margin: 0px 0px 15px 0px;
+}
+
+.featured-works {
+  padding: 30px 0px 80px 0px;
+}
+@media (max-width: 767.98px) {
+  .featured-works {
+    padding: 30px 0px 30px 0px;
+  }
+}
+
+.featured-works__title {
+  margin: 0px 0px 20px 0px;
+}
+
+@media (max-width: 767.98px) {
+  .works {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+  }
+}
+
+.works__item {
+  padding-bottom: 30px;
+  margin: 0px 0px 30px 0px;
+  border-bottom: 1px solid #fff;
+}
+.works__item:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 767.98px) {
+  .works__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+@media (max-width: 767.98px) {
+  .works__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90%;
+            flex: 0 0 90%;
+    margin: 0px 15px 0px 0px;
+  }
+}
+
+.works__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 246px;
+          flex: 0 0 246px;
+  display: block;
+  border-radius: 6px;
+  min-height: 180px;
+  overflow: hidden;
+}
+@media (max-width: 767.98px) {
+  .works__image {
+    padding: 0px 0px 60% 0px;
+  }
+}
+
+.works__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+@media (min-width: 767.98px) {
+  .works__body {
+    margin: 0px 0px 17px 0px;
+    margin-left: 20px;
+  }
+}
+
+.works__title {
+  color: inherit;
+  display: inline-block;
+  font-size: 30px;
+  line-height: 146.6666666667%;
+  font-weight: 700;
+  margin: 0px 0px 15px 0px;
+}
+@media (max-width: 767.98px) {
+  .works__title {
+    font-size: 24px;
+  }
+}
+
+.works__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px 0px 15px 0px;
+}
+
+.works__year {
+  background: #000;
+  border-radius: 16px;
+  height: 25px;
+  padding: 0px 10px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.works__category {
+  color: #8995a4;
+  font-size: 20px;
+  margin: 0px 0px 0px 25px;
+}
+@charset "UTF-8";
+/*-------обнуление---------*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+html, body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  background-color: #fff;
+  /*---color font---*/
+  color: #21243d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+}
+@charset "UTF-8";
+/*========МИКСИНЫ============================================================================*
+@import './mixins.scss';
+/*========МИКСИНЫ============================================================================*/
+/*========ШРИФТЫ============================================================================*/
+/*======== ПОДКЛЮЧАЕМ ШРИФТЫ============================================================================*/
+/*======== ПОДКЛЮЧАЕМ ШРИФТЫ============================================================================*/
+/*======== ИКОНОЧНЫЕ ШРИФТЫ============================================================================*/
+/*======== ИКОНОЧНЫЕ ШРИФТЫ============================================================================*/
+/*========ШРИФТ ПО УМОЛЧАНИЮ============================================================================*/
+/*========ШРИФТ ПО УМОЛЧАНИЮ============================================================================*/
+/*========ШРИФТЫ============================================================================*/
+/*========ПЕРЕМЕННЫЕ============================================================================*/
+/*========ПЕРЕМЕННЫЕ============================================================================*/
+.page {
+  padding: 90px 0px 0px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+@media (max-width: 767.98px) {
+  .page {
+    padding: 30px 0px 0px 0px;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*=========ОСНОВНАЯ СЕТКА==================================================================================*/
+._container {
+  max-width: 856px;
+  margin: 0 auto;
+  /*@media (max-width: $md1+px) {
+    max-width: 970px;*/
+}
+@media (max-width: 868px) {
+  ._container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 991.98px) {
+  ._container {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+@charset "UTF-8";
+/*----повторяющиеся классы---------*/
+/*========ПЕРЕМЕННЫЕ============================================================================*/
+/*========ПЕРЕМЕННЫЕ============================================================================*/
+/*----повторяющиеся классы---------*/
+.title {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 60px;
+}
+@media (max-width: 767.98px) {
+  .title {
+    font-size: 32px;
+  }
+}
+
+.text {
+  font-size: 16px;
+  line-height: 143.75%;
+}
+
+.title-posts {
+  font-size: 22px;
+}
+@media (max-width: 767.98px) {
+  .title-posts {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+._ibg {
+  position: relative;
+}
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
